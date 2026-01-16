@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat | Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg-gradient: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+            --glass-bg: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #4f46e5, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: #64748b;
+            margin-top: 8px;
+            font-size: 1.1rem;
+        }
+
+        .commentbox {
+            min-height: 500px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Global Discussion</h1>
+            <p>Welcome! Drop a message below to join the chat.</p>
+        </header>
+
+        <div class="commentbox"></div>
+
+        <footer>
+            &copy; 2026 Static Chat Platform
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script>
+        commentBox('5709947954266112-proj', {
+            textColor: '#1e293b',
+            subtextColor: '#64748b',
+            buttonColor: '#6366f1',
+            backgroundColor: 'transparent'
+        });
+    </script>
+
+</body>
+</html>
